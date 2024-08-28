@@ -221,7 +221,6 @@ export default function Component() {
                       <Link
                         href="https://tripwise-rho.vercel.app/"
                         prefetch={false}
-                        target="_blank"
                       >
                         Access
                       </Link>
@@ -251,7 +250,6 @@ export default function Component() {
                       <Link
                         href="https://github.com/atreib/portfolio"
                         prefetch={false}
-                        target="_blank"
                       >
                         Source Code
                       </Link>
@@ -282,7 +280,6 @@ export default function Component() {
                       <Link
                         href="https://github.com/atreib/cqrs"
                         prefetch={false}
-                        target="_blank"
                       >
                         Source Code
                       </Link>
@@ -313,7 +310,6 @@ export default function Component() {
                       <Link
                         href="https://github.com/atreib/beasy"
                         prefetch={false}
-                        target="_blank"
                       >
                         Source Code
                       </Link>
@@ -344,7 +340,6 @@ export default function Component() {
                       <Link
                         href="https://cloudy-marsupial-788.notion.site/Classes-f9cd7e07d2a2468294526640f6f2c963?pvs=74"
                         prefetch={false}
-                        target="_blank"
                       >
                         Read More
                       </Link>
@@ -463,11 +458,7 @@ export default function Component() {
                 </div>
                 <div className="flex space-x-4">
                   <Button variant="ghost" size="icon" asChild>
-                    <Link
-                      href="https://github.com/atreib/"
-                      prefetch={false}
-                      target="_blank"
-                    >
+                    <Link href="https://github.com/atreib/" prefetch={false}>
                       <GithubIcon className="h-6 w-6" />
                     </Link>
                   </Button>
@@ -475,7 +466,6 @@ export default function Component() {
                     <Link
                       href="https://twitter.com/treibthedev"
                       prefetch={false}
-                      target="_blank"
                     >
                       <TwitterIcon className="h-6 w-6" />
                     </Link>
@@ -484,17 +474,12 @@ export default function Component() {
                     <Link
                       href="https://www.linkedin.com/in/atreib/"
                       prefetch={false}
-                      target="_blank"
                     >
                       <LinkedinIcon className="h-6 w-6" />
                     </Link>
                   </Button>
                   <Button variant="ghost" size="icon" asChild>
-                    <Link
-                      href="mailto:me@andretreib.com"
-                      prefetch={false}
-                      target="_blank"
-                    >
+                    <Link href="mailto:me@andretreib.com" prefetch={false}>
                       <MailIcon className="h-6 w-6" />
                     </Link>
                   </Button>
@@ -530,18 +515,11 @@ export default function Component() {
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link
-            href="#"
+            href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
             className="text-xs hover:underline underline-offset-4"
             prefetch={false}
           >
-            Terms of Service
-          </Link>
-          <Link
-            href="#"
-            className="text-xs hover:underline underline-offset-4"
-            prefetch={false}
-          >
-            Privacy
+            Peak human potential
           </Link>
         </nav>
       </footer>
