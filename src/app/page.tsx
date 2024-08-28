@@ -29,8 +29,8 @@ export default function Component() {
           <Image
             className="h-12 w-12 object-contain object-center"
             src="/icons/andre-treib-icon.png"
-            width={30}
-            height={30}
+            width={100}
+            height={100}
             alt="Andre Treib"
           />
           <span className="sr-only">Andre Treib</span>
@@ -231,6 +231,36 @@ export default function Component() {
                 <Card className="flex flex-col h-full">
                   <CardHeader>
                     <Image
+                      src="/icons/andre-treib-high-res-logo-transparent.png"
+                      width="550"
+                      height="310"
+                      alt="Andre Treib logo"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">This portfolio</h3>
+                    <p className="text-muted-foreground">
+                      This site that you are visiting right now is a Next.js
+                      project. I built it to have a portfolio and to show case
+                      some of my skills.
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://github.com/atreib/portfolio"
+                        prefetch={false}
+                        target="_blank"
+                      >
+                        Source Code
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
                       src="/assets/cqrs-diagram.png"
                       width="550"
                       height="310"
@@ -296,7 +326,7 @@ export default function Component() {
                       src="/assets/screenshot-of-andre-treib-articles.png"
                       width="550"
                       height="310"
-                      alt="Beasy"
+                      alt="Personal articles screenshot"
                       className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
                     />
                   </CardHeader>
