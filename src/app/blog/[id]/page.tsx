@@ -5,6 +5,7 @@ import { formatDate } from "@/lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 import { Metadata, ResolvingMetadata } from "next";
+import { RenderBodyContent } from "@/sanity/components/render-body-content";
 
 type PageProps = {
   params: { id: string };
@@ -68,7 +69,7 @@ export default async function Page({ params }: PageProps) {
           Published on {formatDate(post.date)}
         </p>
       </header>
-      <aside className="w-full lg:w-1/2 aspect-video">
+      <aside className="w-full lg:w-1/2 aspect-auto">
         <Image
           src={post.thumbnail}
           alt={post.title}
@@ -77,9 +78,23 @@ export default async function Page({ params }: PageProps) {
           className="object-cover object-center w-full h-full"
         />
       </aside>
-      <main className="">
-        <article dangerouslySetInnerHTML={{ __html: post.content }} />
+      <main className="blog-post">
+        <RenderBodyContent content={post.content} />
       </main>
+      <footer className="flex items-center justify-between bg-muted p-8 text-muted-foreground">
+        <div>
+          <p>Published on {formatDate(post.date)}</p>
+        </div>
+        <div className="flex items-center gap-2">
+          <span>{post.author.name}</span>
+          <Avatar>
+            <AvatarImage src={post.author.avatar} />
+            <AvatarFallback>
+              {post.author.name.slice(0, 2).toUpperCase()}
+            </AvatarFallback>
+          </Avatar>
+        </div>
+      </footer>
     </div>
   );
 }

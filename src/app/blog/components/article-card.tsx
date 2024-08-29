@@ -38,9 +38,6 @@ function ArticleCard({ article }: { article: Article }) {
           <span>·</span>
           <span>{formatDate(article.date)}</span>
         </div>
-        <p className="text-muted-foreground line-clamp-2">
-          {article.content.slice(0, 100)}...
-        </p>
       </div>
     </Link>
   );
