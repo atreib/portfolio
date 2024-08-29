@@ -19,6 +19,21 @@ const fontBody = Archivo({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://andretreib.com"),
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://andretreib.com",
+    siteName: "Andre Treib | Software Engineer",
+    images: [
+      {
+        url: "/assets/software-developer-building-digital-product.png",
+        width: 1200,
+        height: 630,
+        alt: "Andre Treib | Software Engineer",
+      },
+    ],
+  },
   applicationName: "Andre Treib's Two Cents",
   title: "Andre Treib | Software Engineer",
   description:
