@@ -19,6 +19,7 @@ const fontBody = Archivo({
 });
 
 export const metadata: Metadata = {
+  applicationName: "Andre Treib's Two Cents",
   title: "Andre Treib | Software Engineer",
   description:
     "An experienced software engineer with a passion for building digital products.",
@@ -52,7 +53,10 @@ export const metadata: Metadata = {
   creator: "Andre Treib",
   publisher: "Andre Treib",
   category: "portfolio",
-  robots: "index, follow",
+  robots: {
+    index: true,
+    follow: true,
+  },
   referrer: "origin-when-cross-origin",
 };
 

@@ -6,7 +6,7 @@ import {
   CardContent,
   CardFooter,
 } from "@/components/ui/card";
-import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { Avatar, AvatarFallback } from "@/components/ui/avatar";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import {
@@ -64,6 +64,13 @@ export default function Component() {
           >
             Contact
           </Link>
+          <Link
+            href="/blog"
+            className="text-sm font-medium hover:underline underline-offset-4"
+            prefetch={true}
+          >
+            Blog
+          </Link>
         </nav>
       </header>
       <main className="flex-1">
@@ -93,6 +100,11 @@ export default function Component() {
                 <Button variant="outline" asChild>
                   <Link href="#contact" prefetch={false}>
                     Contact & Newsletter
+                  </Link>
+                </Button>
+                <Button variant="outline" asChild>
+                  <Link href="/blog" prefetch={true}>
+                    Engineering Blog
                   </Link>
                 </Button>
               </div>
