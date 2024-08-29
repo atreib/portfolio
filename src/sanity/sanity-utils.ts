@@ -19,7 +19,12 @@ export async function sanityFetch<QueryResponse>({
   qParams: QueryParams;
   tags: string[];
 }): Promise<QueryResponse> {
-  return client.fetch<QueryResponse>(query, qParams);
+  return client.fetch<QueryResponse>(query, qParams, {
+    next: {
+      revalidate: tags.length ? false : 3600, // 1 hour
+      tags,
+    },
+  });
 }
 
 export const getPostsFromSanity = async () => {
