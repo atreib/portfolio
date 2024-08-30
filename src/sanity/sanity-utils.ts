@@ -3,6 +3,7 @@ import { createClient, type QueryParams } from "next-sanity";
 import clientConfig from "./config/client-config";
 import { postQuery, postQueryBySlug } from "./sanity-query";
 import { SanityBlogPost } from "./types";
+import { BLOG_REVALIDATE_TIME } from "@/lib/constants";
 
 export const client = createClient(clientConfig);
 
@@ -21,7 +22,7 @@ export async function sanityFetch<QueryResponse>({
 }): Promise<QueryResponse> {
   return client.fetch<QueryResponse>(query, qParams, {
     next: {
-      revalidate: tags.length ? false : 3600, // 1 hour
+      revalidate: BLOG_REVALIDATE_TIME,
       tags,
     },
   });

@@ -1,7 +1,8 @@
 import { getAllArticles } from "@/services/articles";
 import { ArticleCard } from "./components/article-card";
+import { BLOG_REVALIDATE_TIME } from "@/lib/constants";
 
-export const revalidate = 3600; // 1 hour
+export const revalidate = BLOG_REVALIDATE_TIME;
 
 export default async function Page() {
   const articles = await getAllArticles();
