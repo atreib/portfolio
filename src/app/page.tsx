@@ -231,7 +231,7 @@ export default function Component() {
                   <CardFooter className="space-x-2">
                     <Button variant="outline" asChild>
                       <Link
-                        href="https://tripwise-rho.vercel.app/"
+                        href="https://tripwise.andretreib.com/"
                         prefetch={false}
                       >
                         Access
