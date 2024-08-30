@@ -242,6 +242,43 @@ export default function Component() {
                 <Card className="flex flex-col h-full">
                   <CardHeader>
                     <Image
+                      src="/assets/rocketshipper-logo.png"
+                      width="550"
+                      height="310"
+                      alt="Rocketshipper logo"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-gray-900"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">Rocketshipper</h3>
+                    <p className="text-muted-foreground">
+                      A quick and fun study project to learn more about building
+                      games with React. I was able to play with particle
+                      effects, FPS delta, and canvas.
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://rocketshipper.andretreib.com/"
+                        prefetch={false}
+                      >
+                        Access
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://github.com/atreib/rocketshipper"
+                        prefetch={false}
+                      >
+                        Source Code
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
                       src="/icons/andre-treib-high-res-logo-transparent.png"
                       width="550"
                       height="310"
