@@ -64,12 +64,12 @@ export default async function Layout({ children }: React.PropsWithChildren) {
       <main className="flex-1 py-8 md:py-12 lg:py-16">
         <div className="container px-4 md:px-6">{children}</div>
       </main>
-      <footer className="bg-background border-t px-4 md:px-6 py-4 flex items-center justify-between">
+      <footer className="bg-background border-t px-4 md:px-6 py-4 flex flex-col lg:flex-row items-center justify-between">
         <div className="text-sm text-muted-foreground">
           &copy;{" "}
           {`${new Date().getFullYear()} Andre Treib's Two Cents. All rights reserved.`}
         </div>
-        <nav className="flex gap-4">
+        <nav className="flex gap-4 mt-4 lg:mt-0">
           <Link
             href="/#contact"
             className="text-sm font-medium hover:underline underline-offset-4"
