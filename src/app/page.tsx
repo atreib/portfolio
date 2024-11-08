@@ -20,7 +20,7 @@ import {
 export default function Component() {
   return (
     <div className="flex flex-col min-h-[100dvh]">
-      <header className="px-8 lg:px-6 h-14 flex items-center ">
+      <header className="px-8 lg:px-6 h-14 flex items-center fixed w-full bg-gradient-to-b from-background to-transparent backdrop-blur-sm">
         <Link
           href="/"
           className="items-center justify-center hidden sm:flex"
@@ -222,21 +222,14 @@ export default function Component() {
                   <CardContent className="flex-1">
                     <h3 className="text-xl font-bold">Tripwise</h3>
                     <p className="text-muted-foreground">
-                      A Next.js project to help you plan your next trip using
-                      AI. With all the fuss around LLM, I decided to build my
-                      own product.{" "}
-                      <span className="font-bold">Still in development.</span>
+                      A Next.js 15 AI project to help you plan your next trip.
+                      With all the fuss around LLM, I decided to build my own
+                      product. I mean, I&apos;m your favorite
+                      developer-product-marketing guy, right?
                     </p>
                   </CardContent>
-                  <CardFooter className="space-x-2">
-                    <Button variant="outline" asChild>
-                      <Link
-                        href="https://tripwise.andretreib.com/"
-                        prefetch={false}
-                      >
-                        Access
-                      </Link>
-                    </Button>
+                  <CardFooter className="space-x-2 text-muted-foreground font-light text-sm">
+                    Coming soon...
                   </CardFooter>
                 </Card>
                 <Card className="flex flex-col h-full">
@@ -287,11 +280,13 @@ export default function Component() {
                     />
                   </CardHeader>
                   <CardContent className="flex-1">
-                    <h3 className="text-xl font-bold">This portfolio</h3>
+                    <h3 className="text-xl font-bold">This portfolio + blog</h3>
                     <p className="text-muted-foreground">
-                      This site that you are visiting right now is a Next.js
+                      This site that you are visiting right now is a Next.js 14
                       project. I built it to have a portfolio and to show case
-                      some of my skills.
+                      some of my skills, inclusing SEO (it ranks better than my
+                      social network). It also contains my own blog, a SSG
+                      setup, with Sanity as my CMS.
                     </p>
                   </CardContent>
                   <CardFooter className="space-x-2">
@@ -301,6 +296,44 @@ export default function Component() {
                         prefetch={false}
                       >
                         Source Code
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
+                      src="/assets/poketwitter.png"
+                      width="550"
+                      height="310"
+                      alt="Poketwitter screenshot"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">Poketwitter</h3>
+                    <p className="text-muted-foreground">
+                      I was studying a little bit how stateless auth works, and
+                      how to safely create magic links, so I built this little
+                      project to practice it. It is a simple twitter clone that
+                      transforms every tweet into &quot;pokemon language&quot;.
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://poketwitter.andretreib.com"
+                        prefetch={false}
+                      >
+                        Access
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://github.com/atreib/poketwitter"
+                        prefetch={false}
+                      >
+                        Source code
                       </Link>
                     </Button>
                   </CardFooter>
@@ -361,36 +394,6 @@ export default function Component() {
                         prefetch={false}
                       >
                         Source Code
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-                <Card className="flex flex-col h-full">
-                  <CardHeader>
-                    <Image
-                      src="/assets/screenshot-of-andre-treib-articles.png"
-                      width="550"
-                      height="310"
-                      alt="Personal articles screenshot"
-                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
-                    />
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <h3 className="text-xl font-bold">Personal Articles</h3>
-                    <p className="text-muted-foreground">
-                      {`I like to write articles about the stuff I learn. 
-                      From my experience, it helps me to really understand 
-                      the stuff I am learning. Besides, this is a way to share
-                      my knowledge with others.`}
-                    </p>
-                  </CardContent>
-                  <CardFooter className="space-x-2">
-                    <Button variant="outline" asChild>
-                      <Link
-                        href="https://cloudy-marsupial-788.notion.site/Classes-f9cd7e07d2a2468294526640f6f2c963?pvs=74"
-                        prefetch={false}
-                      >
-                        Read More
                       </Link>
                     </Button>
                   </CardFooter>
