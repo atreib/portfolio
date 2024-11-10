@@ -228,8 +228,23 @@ export default function Component() {
                       developer-product-marketing guy, right?
                     </p>
                   </CardContent>
-                  <CardFooter className="space-x-2 text-muted-foreground font-light text-sm">
-                    Coming soon...
+                  <CardFooter className="space-x-2">
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://tripwise.andretreib.com/"
+                        prefetch={false}
+                      >
+                        Access
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://github.com/atreib/tripwise"
+                        prefetch={false}
+                      >
+                        Source Code
+                      </Link>
+                    </Button>
                   </CardFooter>
                 </Card>
                 <Card className="flex flex-col h-full">
