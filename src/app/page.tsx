@@ -87,8 +87,8 @@ export default function Component() {
                   alt={"Andre Treib"}
                 />
                 <p className="max-w-[700px] text-muted-foreground md:text-lg">
-                  Experienced web fullstack engineer, building digital products
-                  with a taste for coding, marketing and business.
+                  Ok, not sales, but I&apos;m a experienced web fullstack
+                  engineer that loves to build digital product.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -124,10 +124,9 @@ export default function Component() {
                 <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                   Hey there! I am an experienced web fullstack engineer who
                   specializes in building digital products with a focus on
-                  coding, marketing, and business. I have expertise in
-                  technologies like Next.js, Remix, React, and Node, being
-                  passionate about creating innovative solutions that solve
-                  real-world problems.
+                  coding and marketing. I have expertise in technologies like
+                  Next.js, Remix, React, and Node, being passionate about
+                  creating innovative solutions that solve real-world problems.
                 </p>
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
@@ -229,17 +228,86 @@ export default function Component() {
                     </p>
                   </CardContent>
                   <CardFooter className="space-x-2">
-                    <Button variant="outline" asChild>
+                    <Button asChild>
                       <Link
                         href="https://tripwise.andretreib.com/"
                         prefetch={false}
                       >
-                        Access
+                        Try it out
                       </Link>
                     </Button>
                     <Button variant="outline" asChild>
                       <Link
                         href="https://github.com/atreib/tripwise"
+                        prefetch={false}
+                      >
+                        Source Code
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
+                      src="/assets/cloudret-logo.png"
+                      width="550"
+                      height="310"
+                      alt="Cloudret"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">Cloudret</h3>
+                    <p className="text-muted-foreground">
+                      {`An open-source tool to easily build your cloud infrastructure. 
+                      Swap between diagrams and a human-friendly syntax to define it, 
+                      and generate Terraform code out of it. Built with Next.js, 
+                      this is a full-client-side application, making sure user's data is safe.`}
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button asChild>
+                      <Link
+                        href="https://dret.andretreib.com/"
+                        prefetch={false}
+                      >
+                        Try it out
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://github.com/atreib/dret"
+                        prefetch={false}
+                      >
+                        Source Code
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
+                      src="/icons/andre-treib-high-res-logo-transparent.png"
+                      width="550"
+                      height="310"
+                      alt="Andre Treib logo"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">This portfolio + blog</h3>
+                    <p className="text-muted-foreground">
+                      This site that you are visiting right now is a Next.js 14
+                      project. I built it to have a portfolio and to show case
+                      some of my skills, inclusing SEO (it ranks better than my
+                      social network). It also contains my own blog, a SSG
+                      setup, with Sanity as my CMS.
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://github.com/atreib/portfolio"
                         prefetch={false}
                       >
                         Source Code
@@ -277,37 +345,6 @@ export default function Component() {
                     <Button variant="outline" asChild>
                       <Link
                         href="https://github.com/atreib/rocketshipper"
-                        prefetch={false}
-                      >
-                        Source Code
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-                <Card className="flex flex-col h-full">
-                  <CardHeader>
-                    <Image
-                      src="/icons/andre-treib-high-res-logo-transparent.png"
-                      width="550"
-                      height="310"
-                      alt="Andre Treib logo"
-                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
-                    />
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <h3 className="text-xl font-bold">This portfolio + blog</h3>
-                    <p className="text-muted-foreground">
-                      This site that you are visiting right now is a Next.js 14
-                      project. I built it to have a portfolio and to show case
-                      some of my skills, inclusing SEO (it ranks better than my
-                      social network). It also contains my own blog, a SSG
-                      setup, with Sanity as my CMS.
-                    </p>
-                  </CardContent>
-                  <CardFooter className="space-x-2">
-                    <Button variant="outline" asChild>
-                      <Link
-                        href="https://github.com/atreib/portfolio"
                         prefetch={false}
                       >
                         Source Code
@@ -376,36 +413,6 @@ export default function Component() {
                     <Button variant="outline" asChild>
                       <Link
                         href="https://github.com/atreib/cqrs"
-                        prefetch={false}
-                      >
-                        Source Code
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-                <Card className="flex flex-col h-full">
-                  <CardHeader>
-                    <Image
-                      src="/assets/beasy-logo.png"
-                      width="550"
-                      height="310"
-                      alt="Beasy"
-                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
-                    />
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <h3 className="text-xl font-bold">Beasy</h3>
-                    <p className="text-muted-foreground">
-                      {`A B2C product for public transportation. Built with React
-                      and Framer Motion. I won't lie, this one is kind of old.
-                      But it was pretty fun to use Framer Motion, and look back
-                      to see how far I've come.`}
-                    </p>
-                  </CardContent>
-                  <CardFooter className="space-x-2">
-                    <Button variant="outline" asChild>
-                      <Link
-                        href="https://github.com/atreib/beasy"
                         prefetch={false}
                       >
                         Source Code
