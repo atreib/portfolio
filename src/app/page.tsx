@@ -287,6 +287,44 @@ export default function Component() {
                 <Card className="flex flex-col h-full">
                   <CardHeader>
                     <Image
+                      src="/assets/thebackgroundtext-logo.png"
+                      width="550"
+                      height="310"
+                      alt="Cloudret"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">The Background Text</h3>
+                    <p className="text-muted-foreground">
+                      {`Another open-source tool to easily ad text to background of images. 
+                      I'm using an WASM library to extract the background of the image within your browser,
+                      then I get the actual background through the difference between the foreground and the original image.
+                      It also contains a basic text editor so you can add a text between the layers.`}
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button asChild>
+                      <Link
+                        href="https://thebackgroundtext.andretreib.com/"
+                        prefetch={false}
+                      >
+                        Try it out
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://github.com/atreib/thebackgroundtext"
+                        prefetch={false}
+                      >
+                        Source Code
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
                       src="/icons/andre-treib-high-res-logo-transparent.png"
                       width="550"
                       height="310"
