@@ -23,6 +23,7 @@
     "next-sanity": "^9.4.7",
     "react": "^18",
     "react-dom": "^18",
+    "recharts": "^2.15.1",
     "sanity": "^3.56.0",
     "styled-components": "^6.1.12",
     "tailwind-merge": "^2.5.2",
@@ -38,5 +39,8 @@
     "postcss": "^8",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
+  },
+  "overrides": {
+    "react-is": "^19.0.0-rc-69d4b800-20241021"
   }
 }
