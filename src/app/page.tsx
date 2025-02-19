@@ -16,6 +16,7 @@ import {
   MailIcon,
   TwitterIcon,
 } from "lucide-react";
+import { SkillRadarChart } from "./skills";
 
 export default function Component() {
   return (
@@ -128,6 +129,9 @@ export default function Component() {
                   Next.js, Remix, React, and Node, being passionate about
                   creating innovative solutions that solve real-world problems.
                 </p>
+              </div>
+              <div className="w-full">
+                <SkillRadarChart />
               </div>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 <Card className="flex flex-col h-full">
@@ -386,44 +390,6 @@ export default function Component() {
                         prefetch={false}
                       >
                         Source Code
-                      </Link>
-                    </Button>
-                  </CardFooter>
-                </Card>
-                <Card className="flex flex-col h-full">
-                  <CardHeader>
-                    <Image
-                      src="/assets/poketwitter.png"
-                      width="550"
-                      height="310"
-                      alt="Poketwitter screenshot"
-                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
-                    />
-                  </CardHeader>
-                  <CardContent className="flex-1">
-                    <h3 className="text-xl font-bold">Poketwitter</h3>
-                    <p className="text-muted-foreground">
-                      I was studying a little bit how stateless auth works, and
-                      how to safely create magic links, so I built this little
-                      project to practice it. It is a simple twitter clone that
-                      transforms every tweet into &quot;pokemon language&quot;.
-                    </p>
-                  </CardContent>
-                  <CardFooter className="space-x-2">
-                    <Button variant="outline" asChild>
-                      <Link
-                        href="https://poketwitter.andretreib.com"
-                        prefetch={false}
-                      >
-                        Access
-                      </Link>
-                    </Button>
-                    <Button variant="outline" asChild>
-                      <Link
-                        href="https://github.com/atreib/poketwitter"
-                        prefetch={false}
-                      >
-                        Source code
                       </Link>
                     </Button>
                   </CardFooter>
