@@ -253,26 +253,25 @@ export default function Component() {
                 <Card className="flex flex-col h-full">
                   <CardHeader>
                     <Image
-                      src="/assets/cloudret-logo.png"
+                      src="/assets/jerry-logo.jpg"
                       width="550"
                       height="310"
-                      alt="Cloudret"
+                      alt="Jerry"
                       className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
                     />
                   </CardHeader>
                   <CardContent className="flex-1">
-                    <h3 className="text-xl font-bold">Cloudret</h3>
+                    <h3 className="text-xl font-bold">Jerry</h3>
                     <p className="text-muted-foreground">
-                      {`An open-source tool to easily build your cloud infrastructure. 
-                      Swap between diagrams and a human-friendly syntax to define it, 
-                      and generate Terraform code out of it. Built with Next.js, 
-                      this is a full-client-side application, making sure user's data is safe.`}
+                      {`Meet Jerry, a friendly AI-powered 3D character that loves to chat and make kids laugh.
+                      This is an open-source project I built to explore my knowledge about 3D and AI.
+                      It is built with Next.js, Three.js, and OpenAI.`}
                     </p>
                   </CardContent>
                   <CardFooter className="space-x-2">
                     <Button asChild>
                       <Link
-                        href="https://dret.andretreib.com/"
+                        href="https://jerry.andretreib.com/"
                         prefetch={false}
                       >
                         Try it out
@@ -280,7 +279,7 @@ export default function Component() {
                     </Button>
                     <Button variant="outline" asChild>
                       <Link
-                        href="https://github.com/atreib/dret"
+                        href="https://github.com/atreib/talk-to-jerry-2"
                         prefetch={false}
                       >
                         Source Code
@@ -319,6 +318,44 @@ export default function Component() {
                     <Button variant="outline" asChild>
                       <Link
                         href="https://github.com/atreib/thebackgroundtext"
+                        prefetch={false}
+                      >
+                        Source Code
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
+                      src="/assets/cloudret-logo.png"
+                      width="550"
+                      height="310"
+                      alt="Cloudret"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">Cloudret</h3>
+                    <p className="text-muted-foreground">
+                      {`An open-source tool to easily build your cloud infrastructure. 
+                      Swap between diagrams and a human-friendly syntax to define it, 
+                      and generate Terraform code out of it. Built with Next.js, 
+                      this is a full-client-side application, making sure user's data is safe.`}
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button asChild>
+                      <Link
+                        href="https://dret.andretreib.com/"
+                        prefetch={false}
+                      >
+                        Try it out
+                      </Link>
+                    </Button>
+                    <Button variant="outline" asChild>
+                      <Link
+                        href="https://github.com/atreib/dret"
                         prefetch={false}
                       >
                         Source Code
