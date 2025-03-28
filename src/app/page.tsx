@@ -626,7 +626,7 @@ export default function Component() {
       </main>
       <footer className="flex flex-col gap-2 sm:flex-row py-6 w-full shrink-0 items-center  border-t px-8 lg:px-6">
         <p className="text-xs text-muted-foreground">
-          &copy; 2024 Andre Treib. All rights reserved.
+          &copy; {new Date().getFullYear()} Andre Treib. All rights reserved.
         </p>
         <nav className="sm:ml-auto flex gap-4 sm:gap-6">
           <Link
