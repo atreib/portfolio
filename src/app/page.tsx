@@ -215,6 +215,34 @@ export default function Component() {
                 <Card className="flex flex-col h-full">
                   <CardHeader>
                     <Image
+                      src="/assets/bairro-aberto.png"
+                      width="550"
+                      height="310"
+                      alt="Tripwise"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">Bairro Aberto</h3>
+                    <p className="text-muted-foreground">
+                      Have you ever heard of Glassdoor? Now picture it for a
+                      neighborhood.
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button asChild>
+                      <Link
+                        href="https://bairroaberto.com.br/"
+                        prefetch={false}
+                      >
+                        Try it out
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
                       src="/assets/tripwise-logo.png"
                       width="550"
                       height="310"
