@@ -89,7 +89,7 @@ export default function Component() {
                 />
                 <p className="max-w-[700px] text-muted-foreground md:text-lg">
                   Ok, not sales, but I&apos;m a experienced web fullstack
-                  engineer that loves to build digital product.
+                  engineer that loves to build digital products.
                 </p>
               </div>
               <div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -260,6 +260,63 @@ export default function Component() {
                     <Button asChild>
                       <Link
                         href="https://bairroaberto.com.br/"
+                        prefetch={false}
+                      >
+                        Try it out
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
+                      src="/assets/ebook-factory-logo.png"
+                      width="550"
+                      height="310"
+                      alt="Ebook Factory"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">E-book Factory</h3>
+                    <p className="text-muted-foreground">
+                      One-shot ebooks about anything! It even generate high-quality images for you!
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button asChild>
+                      <Link
+                        href="https://ebook-factory.vercel.app/"
+                        prefetch={false}
+                      >
+                        Try it out
+                      </Link>
+                    </Button>
+                  </CardFooter>
+                </Card>
+                <Card className="flex flex-col h-full">
+                  <CardHeader>
+                    <Image
+                      src="/assets/nutrisaas-logo.png"
+                      width="550"
+                      height="310"
+                      alt="Nutri SaaS"
+                      className="mx-auto aspect-video overflow-hidden rounded-xl object-contain object-center sm:w-full bg-white"
+                    />
+                  </CardHeader>
+                  <CardContent className="flex-1">
+                    <h3 className="text-xl font-bold">Nutri SaaS</h3>
+                    <p className="text-muted-foreground">
+                      This SaaS helps nutriotionists to manage their daily routine,
+                      with patients control, smart calendar, meal planning tool, 
+                      embedded AI assistant per patient,
+                      anthropometric assessment tool, and much more!
+                    </p>
+                  </CardContent>
+                  <CardFooter className="space-x-2">
+                    <Button asChild>
+                      <Link
+                        href="https://nutri-saas-web-app.vercel.app/"
                         prefetch={false}
                       >
                         Try it out
