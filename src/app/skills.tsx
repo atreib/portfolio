@@ -2,7 +2,6 @@
 
 import { PolarAngleAxis, PolarGrid, Radar, RadarChart } from "recharts";
 import {
-  type ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
@@ -16,18 +15,16 @@ export function SkillRadarChart() {
           label: "Level",
         },
       }}
-      className="mx-auto max-h-[250px]"
+      className="mx-auto max-h-[300px]"
     >
       <RadarChart
         data={[
-          { name: "Web development", level: 10 },
-          { name: "Backend development", level: 8 },
-          { name: "Mobile development", level: 6 },
-          { name: "DevOps", level: 6 },
-          { name: "Product management", level: 8 },
-          { name: "Team management", level: 7 },
-          { name: "Being a jerk", level: 1 },
-          { name: "Being a cool dude", level: 10 },
+          { name: "AI engineering", level: 9 },
+          { name: "Product engineering", level: 9 },
+          { name: "System design & EDA", level: 9 },
+          { name: "Frontend (React/Next)", level: 10 },
+          { name: "Backend (Node/TS)", level: 9 },
+          { name: "Testing & observability", level: 8 },
         ]}
       >
         <ChartTooltip cursor={false} content={<ChartTooltipContent />} />
