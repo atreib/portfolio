@@ -1,10 +1,10 @@
 const roles = [
   {
     company: "House Numbers",
-    title: "Senior Software Engineer",
+    title: "Senior Software Engineer · de facto Tech Lead",
     period: "04/2022 — Present",
     summary:
-      "First engineer hired at a US mortgage SaaS — built the product's AI backbone: RAG pipelines, agentic workflows over an event-driven backbone, and a custom MCP server wired to an internal tool-using agent, saving 12+ hours per loan processed across 12 production microservices at 80% test coverage.",
+      "First engineer hired at a US, AI-native mortgage SaaS — now de facto tech lead of its AI platform. Championed and built Zora Voice, a real-time voice AI agent, solo from zero to production in 21 days (~0.9 s to first audio). Architected the AI-agent workflow engine (48 production workflows, ~115k LLM runs/month) and the LLM loan-processing agent saving 12+ hours per loan. #2 contributor to the 16-service monorepo: ~3,500 commits, 322 PRs at 92% merged.",
   },
   {
     company: "Avenue Code",
@@ -46,8 +46,8 @@ export function Experience() {
               Where Andre Treib has been.
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              11 years of full-stack delivery — last 5 on English-first
-              remote teams.
+              12 years of full-stack delivery — the last 5 on English-first
+              remote teams for US companies.
             </p>
           </div>
           <ol className="relative w-full max-w-3xl border-l border-border ml-3 sm:ml-0">
