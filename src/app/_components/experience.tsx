@@ -4,7 +4,7 @@ const roles = [
     title: "Senior Software Engineer",
     period: "04/2022 — Present",
     summary:
-      "First engineer hired at a US mortgage SaaS — built the product's AI backbone: RAG pipelines, agentic workflows over an event-driven backbone, and a custom MCP server wired to an internal tool-using agent, saving 12+ hours per loan processed across 12 production microservices at 80% test coverage.",
+      "First engineer hired at a US mortgage SaaS — now de facto tech lead of its AI platform. Built the product's AI backbone: a real-time voice AI agent, RAG pipelines, agentic workflows over an event-driven backbone, and a custom MCP server wired to an internal tool-using agent — saving 12+ hours per loan processed.",
   },
   {
     company: "Avenue Code",
@@ -46,7 +46,7 @@ export function Experience() {
               Where Andre Treib has been.
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              11 years of full-stack delivery — last 5 on English-first
+              12 years of full-stack delivery — last 5 on English-first
               remote teams.
             </p>
           </div>

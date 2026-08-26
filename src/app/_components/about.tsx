@@ -20,15 +20,15 @@ const aboutImages = [
 const pillars = [
   {
     title: "Ships AI features end-to-end",
-    body: "RAG pipelines, agentic workflows over EDA, and a custom MCP server in production — from data ingestion and chunking through reasoning-based orchestration.",
+    body: "Real-time voice agents, RAG pipelines, agentic workflows over EDA, and a custom MCP server in production — from data ingestion and chunking through reasoning-based orchestration.",
   },
   {
     title: "Builds for product impact",
-    body: "First engineer hired at a US SaaS, helped shape the roadmap and engineering culture, and have served as Product Owner before. Comfortable moving between IC depth and product-facing decisions.",
+    body: "First engineer hired at a US SaaS — now its de facto tech lead — helped shape the roadmap and engineering culture, and have served as Product Owner before. Comfortable moving between IC depth and product-facing decisions.",
   },
   {
     title: "Tested + observable by default",
-    body: "TDD across the full pyramid — unit, integration, E2E. 80% coverage on 12 production microservices, structured logging and telemetry, regression escape rate cut to near zero.",
+    body: "TDD across the full pyramid — unit, integration, E2E. Near 1:1 test-to-source coverage on a 16-service monorepo, structured logging and telemetry, regression escape rate cut to near zero.",
   },
 ];
 
@@ -54,15 +54,15 @@ export function About() {
               Who is Andre Treib?
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Senior full-stack engineer with 11 years of experience shipping
+              Senior full-stack engineer with 12 years of experience shipping
               products end-to-end across Next.js, React, and Node. The last
               two years have been a step-change: I leverage AI coding
               assistants and purpose-built internal tooling to compress
               4-week scopes into 3 days, then protect every shipped feature
               with rigorous unit, integration and E2E coverage. I build and
-              operate RAG pipelines, agentic workflows over event-driven
-              architecture, and a custom MCP server wired into our own
-              tool-using AI agent.
+              operate real-time voice AI agents, RAG pipelines, agentic
+              workflows over event-driven architecture, and a custom MCP
+              server wired into our own tool-using AI agent.
             </p>
           </div>
           <div className="w-full">
