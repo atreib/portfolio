@@ -18,13 +18,11 @@ export function Hero() {
 					/>
 					<div className="space-y-6 max-w-[900px]">
 						<h1 className="text-4xl font-bold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl">
-							I ship production AI agents for US startups.
+							Senior Product Engineer
 						</h1>
 						<p className="mx-auto max-w-[760px] text-muted-foreground md:text-xl/relaxed">
-							Staff-level product engineer, 12 years shipping end-to-end.
-							Latest: a real-time voice AI agent, solo, zero to production in
-							21 days — ~0.9&nbsp;s to first audio. Based in Brazil (UTC−3),
-							working US hours since 2021.
+							AI-native product engineer with 11 years of experience shipping
+							end-to-end solutions.
 						</p>
 					</div>
 					<div className="flex flex-col gap-2 min-[400px]:flex-row">
@@ -42,11 +40,6 @@ export function Hero() {
 							<Link href="#contact" prefetch={false}>
 								Get in touch
 							</Link>
-						</Button>
-						<Button variant="ghost" asChild>
-							<a href="/Andre-Treib.pdf" download>
-								Download resume
-							</a>
 						</Button>
 					</div>
 					<div className="pt-8">

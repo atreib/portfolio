@@ -28,24 +28,16 @@ export const metadata: Metadata = {
     images: [
       {
         url: "/assets/software-developer-building-digital-product.png",
-        width: 1162,
-        height: 1552,
+        width: 1200,
+        height: 630,
         alt: "Andre Treib | AI-native Product Engineer",
       },
     ],
   },
-  twitter: {
-    card: "summary_large_image",
-    creator: "@treibthedev",
-    title: "Andre Treib | AI-native Product Engineer",
-    description:
-      "Staff-level engineer, 12 years shipping end-to-end. Production voice AI agents, RAG pipelines, agentic workflows, and a custom MCP server — from Brazil (UTC−3), on US hours.",
-    images: ["/assets/software-developer-building-digital-product.png"],
-  },
   applicationName: "Andre Treib",
   title: "Andre Treib | AI-native Product Engineer",
   description:
-    "Staff-level full-stack engineer, 12 years shipping end-to-end. Production voice AI agents, RAG pipelines, agentic workflows over event-driven systems, and a custom MCP server — from Brazil (UTC−3), on US hours.",
+    "Senior full-stack engineer, 11 years shipping end-to-end. RAG pipelines, agentic workflows over event-driven systems, and a custom MCP server wired to a tool-using AI agent.",
   keywords: [
     "Andre Treib",
     "AI-native Product Engineer",
@@ -56,10 +48,6 @@ export const metadata: Metadata = {
     "Event-driven architecture",
     "MCP server",
     "Model Context Protocol",
-    "Voice AI agent",
-    "Real-time voice AI",
-    "LLM-as-judge evals",
-    "AI agents",
     "LLM integration",
     "OpenAI",
     "Anthropic",
