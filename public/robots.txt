@@ -1,7 +1,4 @@
-# Block all crawlers for /studio
+# Allow all crawlers, except for /studio
 User-agent: *
 Disallow: /studio
-
-# Allow all crawlers
-User-agent: *
 Allow: /
