@@ -18,6 +18,21 @@ type Project = {
 
 const projects: Array<Project> = [
   {
+    name: "Waypoint",
+    image: "/assets/waypoint.png",
+    description:
+      "Anonymous travel reviews on a world map. Search any city, filter ten place categories, and read LLM-summarized “what travelers say” digests — a deep-linkable MapLibre map on Next.js.",
+    liveUrl:
+      "https://web-production-5649.up.railway.app/?lng=11.2556&lat=43.7698&z=11.0",
+  },
+  {
+    name: "Maragato Labs",
+    image: "/assets/maragato-labs.png",
+    description:
+      "My AI-native software studio — tradition and technology from the pampas. Conversational systems, knowledge agents, and autonomous workflows, presented in a trilingual React Router v7 site with generative pixel-art.",
+    liveUrl: "https://www.maragatolabs.com/en",
+  },
+  {
     name: "Tripwise",
     image: "/assets/tripwise-logo.png",
     description:
