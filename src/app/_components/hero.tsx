@@ -21,7 +21,7 @@ export function Hero() {
 							Senior Product Engineer
 						</h1>
 						<p className="mx-auto max-w-[760px] text-muted-foreground md:text-xl/relaxed">
-							AI-native product engineer with 11 years of experience shipping
+							AI-native product engineer with 12 years of experience shipping
 							end-to-end solutions.
 						</p>
 					</div>
