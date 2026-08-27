@@ -22,8 +22,7 @@ const projects: Array<Project> = [
     image: "/assets/waypoint.png",
     description:
       "Anonymous travel reviews on a world map. Search any city, filter ten place categories, and read LLM-summarized “what travelers say” digests — a deep-linkable MapLibre map on Next.js.",
-    liveUrl:
-      "https://web-production-5649.up.railway.app/?lng=11.2556&lat=43.7698&z=11.0",
+    liveUrl: "https://waypoint.andretreib.com/",
   },
   {
     name: "Maragato Labs",
