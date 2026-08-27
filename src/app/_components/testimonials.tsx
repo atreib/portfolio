@@ -17,7 +17,52 @@ export function Testimonials() {
               Check out some testimonials from people I have worked with.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex items-start gap-4">
+                  <Avatar className="w-12 h-12 border">
+                    <AvatarFallback>CB</AvatarFallback>
+                  </Avatar>
+                  <div className="grid gap-1 text-left grow">
+                    <div className="font-bold">Crystal Butman</div>
+                    <div className="text-muted-foreground">
+                      Product Manager at House Numbers
+                    </div>
+                  </div>
+                </div>
+                <p className="mt-4 text-muted-foreground text-left">
+                  {`"André has been my closest partner and my go-to on nearly
+                  everything since day one. As the first engineer hired to
+                  build our platform, he knows it more deeply than anyone,
+                  and he's also deeply product-minded, so much so that I
+                  never felt like the only PM in the room. He pushes us to
+                  think outside the box and try new things, while staying
+                  grounded in the requirements and what the team actually
+                  needs. He goes above and beyond, nights, weekends, and
+                  overtime, to solve the hard problems and make sure the
+                  team succeeds, and he makes the impossible look easy.
+                  Every decision he makes is thoughtful and backed by real
+                  data and research. Mortgage is a notoriously complex
+                  space to build in, dense with domain knowledge, legal,
+                  and compliance requirements, and André has never shied
+                  away from it. He meets it with curiosity, always eager to
+                  learn and grow his skill set, and he's constantly testing
+                  new tooling and AI models to work smarter.`}
+                </p>
+                <p className="mt-4 text-muted-foreground text-left">
+                  {`He's bridged roles more than once, stepping in to PM
+                  projects himself when we didn't have the capacity, and
+                  mentoring more junior engineers by sharing his time, his
+                  deep experience, and his knowledge of our tooling,
+                  systems, and process. He's made the product better, our
+                  outcomes better, and the whole team better. I can't
+                  imagine what this stretch would have been like without
+                  him, and he's someone I'll actively look to work with
+                  again and again throughout my career."`}
+                </p>
+              </CardContent>
+            </Card>
             <Card>
               <CardContent className="p-6">
                 <div className="flex items-start gap-4">
