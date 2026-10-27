@@ -33,7 +33,7 @@ export const caseStudyStatusLabel: Record<CaseStudyStatus, string> = {
 
 export const featuredRole: FeaturedRole = {
   company: "House Numbers",
-  title: "Senior Software Engineer",
+  title: "Senior → Staff Software Engineer",
   period: "04/2022 — Present",
   lead: "I was the first engineer hired at House Numbers, a US mortgage-software startup, and I’m now the de facto tech lead of its AI platform. Lending is regulated and a wrong answer is costly, so I build LLM systems where code holds the facts, the model reasons over them, and every step is measured.",
   caseStudies: [

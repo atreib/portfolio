@@ -87,3 +87,114 @@
     @apply underline;
   }
 }
+
+/*
+ * Scroll-driven motion (testimonials).
+ * Scrolling drives every effect, so it runs both ways and never autoplays.
+ * Without support, or with reduced motion, the content stays static and fully visible.
+ * Each rule sets the `animation` shorthand first, because the shorthand resets `animation-timeline`.
+ */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .scroll-reveal {
+      animation: scroll-reveal linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+
+    .scroll-lamp {
+      animation: scroll-lamp linear both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 35%;
+    }
+
+    .scroll-read {
+      view-timeline-name: --scroll-read;
+    }
+
+    .scroll-read-word {
+      animation: scroll-read-word linear both;
+      animation-timeline: view();
+      animation-range: cover 32% cover 50%;
+    }
+
+    .scroll-read-rail {
+      animation: scroll-read-rail linear both;
+      animation-timeline: --scroll-read;
+      animation-range: cover 15% cover 70%;
+    }
+
+    .scroll-stack {
+      view-timeline-name: --scroll-stack;
+    }
+
+    .scroll-stack-recede,
+    .scroll-stack-recede::after {
+      animation-timeline: --scroll-stack;
+      animation-range: exit-crossing
+          calc(var(--stack-index) / var(--stack-count) * 100%)
+        exit-crossing
+          calc((var(--stack-index) + 1) / var(--stack-count) * 100%);
+    }
+
+    .scroll-stack-recede {
+      animation-name: scroll-stack-recede;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+    }
+
+    /* Dim with an overlay, so the card stays opaque and the card below never shows through. */
+    .scroll-stack-recede::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      background: hsl(var(--background));
+      pointer-events: none;
+      animation-name: scroll-stack-dim;
+      animation-timing-function: linear;
+      animation-fill-mode: both;
+    }
+  }
+}
+
+@keyframes scroll-reveal {
+  from {
+    opacity: 0;
+    transform: translateY(1.5rem);
+  }
+}
+
+@keyframes scroll-lamp {
+  from {
+    opacity: 0;
+    transform: scaleX(0.4);
+  }
+}
+
+@keyframes scroll-read-word {
+  from {
+    opacity: 0.2;
+  }
+}
+
+@keyframes scroll-read-rail {
+  from {
+    transform: scaleY(0);
+  }
+}
+
+@keyframes scroll-stack-recede {
+  to {
+    transform: scale(0.92);
+  }
+}
+
+@keyframes scroll-stack-dim {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0.6;
+  }
+}

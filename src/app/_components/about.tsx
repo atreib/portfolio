@@ -1,83 +1,79 @@
 import Image from "next/image";
-import { Card, CardContent } from "@/components/ui/card";
-import { SkillRadarChart } from "../skills";
+import Link from "next/link";
+import { MailIcon } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Card } from "@/components/ui/card";
+import { CopyButton } from "@/components/ui/copy-button";
+import { cn } from "@/lib/utils";
+import { about, type About as AboutContent } from "./about-data";
 
-const aboutImages = [
-  {
-    src: "/assets/software-developer-building-digital-product.png",
-    alt: "Andre Treib building a digital product",
-  },
-  {
-    src: "/assets/andre-treib-lecturing-for-a-classroom.jpg",
-    alt: "Andre Treib lecturing for a classroom",
-  },
-  {
-    src: "/assets/software-developer-working-remote.jpg",
-    alt: "Andre Treib working remotely",
-  },
-];
-
-const pillars = [
-  {
-    title: "Ships AI features end-to-end",
-    body: "Real-time voice agents, RAG pipelines, agentic workflows over EDA, and a custom MCP server in production — from data ingestion and chunking through reasoning-based orchestration.",
-  },
-  {
-    title: "Builds for product impact",
-    body: "First engineer hired at a US SaaS — now its de facto tech lead — helped shape the roadmap and engineering culture, and have served as Product Owner before. Comfortable moving between IC depth and product-facing decisions.",
-  },
-  {
-    title: "Tested + observable by default",
-    body: "TDD across the full pyramid — unit, integration, E2E. Near 1:1 test-to-source coverage on a 16-service monorepo, structured logging and telemetry, regression escape rate cut to near zero.",
-  },
-];
+function ContactCard({ contact }: { contact: AboutContent["contact"] }) {
+  return (
+    <Card className="border-primary/40 p-6 text-left md:p-8">
+      <h3 className="text-balance text-2xl font-bold">{contact.heading}</h3>
+      <p className="mt-2 text-muted-foreground md:text-lg">{contact.prompt}</p>
+      <div className="mt-6 flex flex-wrap items-center gap-3">
+        <Button size="lg" asChild>
+          <Link href={`mailto:${contact.email}`} prefetch={false}>
+            <MailIcon aria-hidden="true" className="mr-2 h-4 w-4" />
+            {contact.email}
+          </Link>
+        </Button>
+        <CopyButton size="lg" value={contact.email} label="Copy email address" />
+      </div>
+      <p className="mt-4 text-muted-foreground">
+        Prefer LinkedIn?{" "}
+        <Link
+          href={contact.linkedinUrl}
+          prefetch={false}
+          className="font-medium text-primary underline-offset-4 hover:underline"
+        >
+          Message me on LinkedIn
+        </Link>
+        .
+      </p>
+      <p className="mt-4 border-t pt-4 text-sm text-muted-foreground">
+        {contact.logistics}
+      </p>
+    </Card>
+  );
+}
 
 export function About() {
   return (
     <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-muted">
       <div className="container">
-        <div className="flex flex-col items-center justify-center space-y-8 text-center">
-          <div className="grid grid-cols-3 gap-3 sm:gap-6 w-full max-w-3xl">
-            {aboutImages.map((image) => (
+        <div className="mx-auto flex max-w-5xl flex-col space-y-12">
+          <div className="grid grid-cols-1 gap-3 sm:grid-cols-3 sm:gap-6">
+            {about.photos.map((photo) => (
               <Image
-                key={image.src}
-                src={image.src}
-                alt={image.alt}
+                key={photo.src}
+                src={photo.src}
+                alt={photo.alt}
                 width={550}
                 height={310}
-                className="aspect-video w-full overflow-hidden rounded-2xl object-cover object-center"
+                sizes="(min-width: 640px) 33vw, 100vw"
+                className={cn(
+                  "aspect-video w-full rounded-2xl object-cover object-center",
+                  !photo.showOnMobile && "hidden sm:block",
+                )}
               />
             ))}
           </div>
-          <div className="space-y-8">
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
-              Who is Andre Treib?
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-              Senior full-stack engineer with 12 years of experience shipping
-              products end-to-end across Next.js, React, and Node. The last
-              two years have been a step-change: I leverage AI coding
-              assistants and purpose-built internal tooling to compress
-              4-week scopes into 3 days, then protect every shipped feature
-              with rigorous unit, integration and E2E coverage. I build and
-              operate real-time voice AI agents, RAG pipelines, agentic
-              workflows over event-driven architecture, and a custom MCP
-              server wired into our own tool-using AI agent.
-            </p>
-          </div>
-          <div className="w-full">
-            <SkillRadarChart />
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
-            {pillars.map((pillar) => (
-              <Card key={pillar.title} className="flex flex-col h-full">
-                <CardContent className="flex-1 p-6 text-left">
-                  <h3 className="text-xl font-bold">{pillar.title}</h3>
-                  <p className="mt-2 text-muted-foreground">{pillar.body}</p>
-                </CardContent>
-              </Card>
+          <h2 className="text-balance text-center text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl">
+            {about.headline}
+          </h2>
+          <div className="space-y-4">
+            {about.paragraphs.map((paragraph) => (
+              <p
+                key={paragraph}
+                className="text-justify hyphens-auto text-foreground/90 sm:hyphens-manual md:text-lg/relaxed"
+              >
+                {paragraph}
+              </p>
             ))}
           </div>
+          <ContactCard contact={about.contact} />
         </div>
       </div>
     </section>
