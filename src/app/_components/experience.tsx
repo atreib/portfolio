@@ -1,40 +1,145 @@
-const roles = [
-  {
-    company: "House Numbers",
-    title: "Senior Software Engineer",
-    period: "04/2022 — Present",
-    summary:
-      "First engineer hired at a US mortgage SaaS — now de facto tech lead of its AI platform. Built the product's AI backbone: a real-time voice AI agent, RAG pipelines, agentic workflows over an event-driven backbone, and a custom MCP server wired to an internal tool-using agent — saving 12+ hours per loan processed.",
-  },
-  {
-    company: "Avenue Code",
-    title: "Senior Software Engineer",
-    period: "10/2021 — 03/2022",
-    summary:
-      "Embedded with a San Francisco client to design and ship a Next.js + serverless SaaS end-to-end (TypeScript, PostgreSQL, MongoDB, Auth0, Lambda) — stood up the CI/CD pipeline on GitHub Actions, onboarded 3 engineers, and delivered my first professional Rust engagement.",
-  },
-  {
-    company: "Eldorado Research Institute",
-    title: "Mid → Senior Software Engineer",
-    period: "07/2020 — 10/2021",
-    summary:
-      "Full-stack engineer on a visual-computing and ML product — built the React/Node/Kotlin interface against ML inference modules with TDD and Clean Architecture end-to-end, then took over as Product Owner, owning roadmap, quality and delivery cadence.",
-  },
-  {
-    company: "MachadoTI",
-    title: "Mid Software Engineer & Account Manager",
-    period: "02/2018 — 07/2020",
-    summary:
-      "Technical reference helping an IT-infrastructure business break into software delivery — shipped outsourced projects across C#, PHP, React, Node, Ionic and SQL/NoSQL for 10+ clients while owning team, cost and deadline management plus client communication.",
-  },
-  {
-    company: "Digicounter",
-    title: "Junior → Mid Software Engineer & Scrum Master",
-    period: "04/2014 — 04/2020",
-    summary:
-      "Drove the full refactor and redesign of the core vehicle-monitoring SaaS, shipped a mobile app — including the ETA algorithm — serving 200+ vehicles and 1,000+ daily passengers, and brought agile methodology into the company.",
-  },
-];
+import { ChevronDownIcon } from "lucide-react";
+import { Badge, type BadgeProps } from "@/components/ui/badge";
+import { Card } from "@/components/ui/card";
+import {
+  caseStudyStatusLabel,
+  featuredRole,
+  pastRoles,
+  type CaseStudy,
+  type CaseStudyStatus,
+  type FeaturedRole,
+  type Role,
+} from "./experience-data";
+
+const statusBadgeVariant: Record<CaseStudyStatus, BadgeProps["variant"]> = {
+  shipped: "soft",
+  production: "soft",
+  rnd: "outline",
+};
+
+function Highlighted({ text, highlight }: { text: string; highlight?: string }) {
+  if (!highlight) {
+    return <>{text}</>;
+  }
+  const [before, after] = text.split(highlight);
+  return (
+    <>
+      {before}
+      <strong className="font-semibold text-foreground">{highlight}</strong>
+      {after}
+    </>
+  );
+}
+
+function CaseStudyCard({ caseStudy }: { caseStudy: CaseStudy }) {
+  return (
+    <Card className="p-4 text-left sm:p-5">
+      <div className="flex flex-wrap gap-1.5">
+        <Badge variant={statusBadgeVariant[caseStudy.status]}>
+          {caseStudyStatusLabel[caseStudy.status]}
+        </Badge>
+        {caseStudy.credit ? (
+          <Badge variant="outline" className="text-muted-foreground">
+            {caseStudy.credit}
+          </Badge>
+        ) : null}
+      </div>
+      <h4 className="mt-3 text-lg font-bold leading-snug text-foreground">
+        {caseStudy.heading}
+      </h4>
+      <p className="mt-2 text-muted-foreground">
+        <Highlighted text={caseStudy.summary} highlight={caseStudy.highlight} />
+      </p>
+      <details className="group mt-3">
+        <summary className="-mx-1 inline-flex min-h-8 cursor-pointer list-none items-center gap-1.5 rounded-sm px-1 text-sm font-medium text-primary underline-offset-4 hover:underline focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-card [&::-webkit-details-marker]:hidden">
+          <ChevronDownIcon
+            aria-hidden="true"
+            className="h-4 w-4 transition-transform duration-200 group-open:rotate-180 motion-reduce:transition-none"
+          />
+          How it works
+          <span className="sr-only"> ({caseStudy.name})</span>
+        </summary>
+        <ul className="mt-2 list-disc space-y-1.5 pl-5 text-[15px] text-muted-foreground marker:text-border">
+          {caseStudy.details.map((detail) => (
+            <li key={detail}>{detail}</li>
+          ))}
+        </ul>
+        {caseStudy.detailsNote ? (
+          <p className="mt-3 text-[15px] text-muted-foreground">
+            {caseStudy.detailsNote}
+          </p>
+        ) : null}
+      </details>
+    </Card>
+  );
+}
+
+function FeaturedRoleItem({ role }: { role: FeaturedRole }) {
+  return (
+    <li className="ml-6 pb-12">
+      <span
+        aria-hidden="true"
+        className="absolute -left-[9px] mt-[7px] h-[18px] w-[18px] rounded-full bg-primary ring-2 ring-primary/40 ring-offset-4 ring-offset-background"
+      />
+      <div className="flex flex-col gap-1 text-left">
+        <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+          <h3 className="text-2xl font-bold">{role.company}</h3>
+          <Badge variant="soft" className="gap-1.5">
+            <span aria-hidden="true" className="h-1.5 w-1.5 rounded-full bg-primary" />
+            Current
+          </Badge>
+          <time className="text-sm text-muted-foreground font-mono">
+            {role.period}
+          </time>
+        </div>
+        <p className="text-sm font-medium text-foreground/80">{role.title}</p>
+        <p className="mt-2 max-w-prose text-foreground/90 md:text-lg/relaxed">
+          {role.lead}
+        </p>
+      </div>
+      <ul className="mt-6 grid gap-3">
+        {role.caseStudies.map((caseStudy) => (
+          <li key={caseStudy.name}>
+            <CaseStudyCard caseStudy={caseStudy} />
+          </li>
+        ))}
+      </ul>
+      <div className="mt-8 text-left">
+        <h4 className="text-base font-bold">How I work</h4>
+        <p className="mt-1.5 max-w-prose text-muted-foreground">
+          {role.practice}
+        </p>
+        <p className="mt-4 text-sm text-muted-foreground">
+          <span className="mr-2 font-mono text-xs uppercase tracking-wider text-foreground">
+            Stack
+          </span>
+          {role.stack.join(" · ")}
+        </p>
+      </div>
+    </li>
+  );
+}
+
+function PastRoleItem({ role }: { role: Role }) {
+  return (
+    <li className="ml-6 pb-10 last:pb-0">
+      <span
+        aria-hidden="true"
+        className="absolute -left-[5px] mt-[9px] h-2.5 w-2.5 rounded-full bg-muted-foreground ring-4 ring-background"
+      />
+      <div className="flex flex-col gap-1 text-left">
+        <div className="flex flex-wrap items-baseline gap-x-3">
+          <h3 className="text-xl font-bold">{role.company}</h3>
+          <time className="text-sm text-muted-foreground font-mono">
+            {role.period}
+          </time>
+        </div>
+        <p className="text-sm font-medium text-foreground/80">{role.title}</p>
+        <p className="mt-2 text-muted-foreground">{role.summary}</p>
+      </div>
+    </li>
+  );
+}
 
 export function Experience() {
   return (
@@ -51,25 +156,9 @@ export function Experience() {
             </p>
           </div>
           <ol className="relative w-full max-w-3xl border-l border-border ml-3 sm:ml-0">
-            {roles.map((role) => (
-              <li key={role.company} className="ml-6 pb-10 last:pb-0">
-                <span
-                  aria-hidden="true"
-                  className="absolute -left-[7px] mt-2 h-3.5 w-3.5 rounded-full bg-primary ring-4 ring-background"
-                />
-                <div className="flex flex-col gap-1 text-left">
-                  <div className="flex flex-wrap items-baseline gap-x-3">
-                    <h3 className="text-xl font-bold">{role.company}</h3>
-                    <time className="text-sm text-muted-foreground font-mono">
-                      {role.period}
-                    </time>
-                  </div>
-                  <p className="text-sm font-medium text-foreground/80">
-                    {role.title}
-                  </p>
-                  <p className="mt-2 text-muted-foreground">{role.summary}</p>
-                </div>
-              </li>
+            <FeaturedRoleItem role={featuredRole} />
+            {pastRoles.map((role) => (
+              <PastRoleItem key={role.company} role={role} />
             ))}
           </ol>
         </div>
