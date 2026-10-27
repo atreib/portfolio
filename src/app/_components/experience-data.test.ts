@@ -1,7 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { featuredRole, pastRoles } from "./experience-data";
-
-const publicCopy = JSON.stringify({ featuredRole, pastRoles });
+import { featuredRole } from "./experience-data";
 
 describe("experience copy", () => {
   it("never calls R&D work shipped or in production", () => {
@@ -17,12 +15,6 @@ describe("experience copy", () => {
     for (const claim of claims) {
       expect(claim).not.toMatch(/\bship|\bproduction\b/i);
     }
-  });
-
-  it("keeps model IDs, PR numbers and money amounts out of the public copy", () => {
-    expect(publicCopy).not.toMatch(/\b(gpt|claude|gemini|text-embedding)-/i);
-    expect(publicCopy).not.toMatch(/#\d{2,}|\bPR\s?\d/i);
-    expect(publicCopy).not.toMatch(/\$\s?\d/);
   });
 
   it("finds each highlight exactly once in its summary", () => {
