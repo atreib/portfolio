@@ -25,23 +25,11 @@ export function Hero() {
 							end-to-end solutions.
 						</p>
 					</div>
-					<div className="flex flex-col gap-2 min-[400px]:flex-row">
-						<Button variant="default" asChild>
-							<Link href="#experience" prefetch={false}>
-								See experience
-							</Link>
-						</Button>
-						<Button variant="outline" asChild>
-							<Link href="#portfolio" prefetch={false}>
-								See projects
-							</Link>
-						</Button>
-						<Button variant="outline" asChild>
-							<Link href="#contact" prefetch={false}>
-								Get in touch
-							</Link>
-						</Button>
-					</div>
+					<Button size="lg" asChild>
+						<Link href="#about" prefetch={false}>
+							Get started
+						</Link>
+					</Button>
 					<div className="pt-8">
 						<ChevronDownIcon className="w-12 h-12 animate-bounce" />
 					</div>
