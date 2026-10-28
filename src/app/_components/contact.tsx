@@ -1,10 +1,5 @@
 import Link from "next/link";
-import {
-  GithubIcon,
-  LinkedinIcon,
-  MailIcon,
-  TwitterIcon,
-} from "lucide-react";
+import { GithubIcon, LinkedinIcon, MailIcon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export function Contact() {
@@ -29,15 +24,6 @@ export function Contact() {
                 aria-label="GitHub"
               >
                 <GithubIcon className="h-6 w-6" />
-              </Link>
-            </Button>
-            <Button variant="ghost" size="icon" asChild>
-              <Link
-                href="https://twitter.com/treibthedev"
-                prefetch={false}
-                aria-label="Twitter"
-              >
-                <TwitterIcon className="h-6 w-6" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild>
